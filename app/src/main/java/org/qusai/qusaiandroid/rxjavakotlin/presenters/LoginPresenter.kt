@@ -16,8 +16,8 @@ var manger:RequestManger?=null
     }
     fun login(dataReturn:DataReturnListener,userName:String,password:String){
         var body=HashMap<String,Any>()
-        body.put("userName","qusai")
-        body.put("password","123")
+        body.put("userName",userName)
+        body.put("password",password)
         manger!!.postRequest("login.php",body,object:
             ServerListener {
             override fun onSucess(data: JSONObject) {
